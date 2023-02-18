@@ -1,0 +1,15 @@
+{% extends 'plantilla.html' %}
+
+{% block titulo %} Registrarse {% endblock %}
+
+{% block contenido %}
+<div class="container mt-4">
+    {{ error }}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="button" class="btn btn-success">Registrarse</button>
+    </form>
+</div>
+{% endblock %}

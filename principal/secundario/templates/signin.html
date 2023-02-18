@@ -1,0 +1,15 @@
+{% extends 'plantilla.html' %}
+
+{% block titulo %} Inicio de sesion {% endblock %}
+
+{% block contenido %}
+<div class="container mt-4">
+    {{ error }}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-success">Ingresar</button>
+    </form>
+</div>
+{% endblock %}
